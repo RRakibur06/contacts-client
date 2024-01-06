@@ -90,34 +90,34 @@ export default function UpdateContact({ id }) {
         <form
           action="post"
           onSubmit={handleClick}
-          className="w-[400px] h-[full] flex flex-col"
+          className="sm:w-[400px] w-[250px] h-[full] flex flex-col"
         >
           <input
-            className="border border-gray-300"
+            className="border border-blue-300 m-1 p-1 rounded"
             type="text"
             placeholder="Type your Name"
             ref={name}
           />
           <input
-            className="border border-gray-300"
+            className="border border-blue-300 m-1 p-1 rounded"
             type="email"
             placeholder="Type your Email (Optional)"
             ref={email}
           />
           <input
-            className="border border-gray-300"
+            className="border border-blue-300 m-1 p-1 rounded"
             type="tel"
             placeholder="Type your Phone Number"
             ref={phoneNumber}
           />
           <input
-            className="border border-gray-300"
+            className="border border-blue-300 m-1 p-1 rounded"
             type="text"
             placeholder="Type your Address"
             ref={address}
           />
           <input
-            className="border border-gray-300"
+            className="border border-blue-300 m-1 p-1 rounded"
             type="file"
             placeholder="Add Profile Picture"
             onChange={handleChange}
@@ -129,14 +129,17 @@ export default function UpdateContact({ id }) {
           ) : (
             ""
           )}
-          <p>Or,</p>
+          <p className="m-1">Or,</p>
           <input
-            className="border border-gray-300"
+            className="border border-blue-300 m-1 p-1 rounded"
             type="text"
             ref={picture}
             placeholder="Upload URL of Image"
           />
-          <button type="submit" className="border border-blue-400">
+          <button
+            type="submit"
+            className="border border-blue-400 m-1 p-1 rounded bg-blue-400 hover:bg-blue-600 text-white font-medium"
+          >
             Update Contact
           </button>
         </form>
